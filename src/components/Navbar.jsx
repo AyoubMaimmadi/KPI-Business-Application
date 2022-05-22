@@ -8,7 +8,7 @@ import { TooltipComponent } from '@syncfusion/ej2-react-popups'
 
 import { Cart, Chat, Notification, UserProfile } from '.'
 import { useStateContext } from '../contexts/ContextProvider'
-import avatar0 from '../data/avatar.jpg'
+import avatar from '../data/avatar0.jpg'
 
 const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
   <TooltipComponent content={title} position="BottomCenter">
@@ -20,7 +20,7 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
 )
 
 const Navbar = () => {
-  const { activeMenu, setActiveMenu } = useStateContext()
+  const { activeMenu, setActiveMenu, handleClick } = useStateContext()
 
   return (
     <div className="flex justify-between p-2 md:ml-6 md:mr-6 relative">
@@ -29,6 +29,15 @@ const Navbar = () => {
         <NavButton title="Cart" customFunc={() => handleClick('cart')} color="blue" icon={<FiShoppingCart />} />
         <NavButton title="Chat" dotColor="#03C9D7" customFunc={() => handleClick('chat')} color="blue" icon={<BsChatLeft />} />
         <NavButton title="Notification" dotColor="rgb(254, 201, 15)" customFunc={() => handleClick('notification')} color="blue" icon={<RiNotification3Line />} />
+        <TooltipComponent content="Profile" position="BottomCenter">
+          <div onClick={() => handleClick('userProfile')} className="flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg">
+            <img className="rounded-full w-8 h-8" src={avatar} alt="user-profile" />
+            <p>
+              <span className="text-gray-400 text-14">Hi,</span> <span className="text-gray-400 font-bold ml-1 text-14">Ayoub</span>
+            </p>
+            <MdKeyboardArrowDown className="text-gray-400 text-14" />
+          </div>
+        </TooltipComponent>
       </div>
     </div>
   )
