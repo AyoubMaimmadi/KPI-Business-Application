@@ -24,4 +24,4 @@ To use you need to:
 
 #### View -> https://nightte-business-app.netlify.app/
 
-PS: `NiGhtte` is my Gamer tag :D
+PS: 'NiGhtte' is my Gamer tag :D
