@@ -22,6 +22,6 @@ To use you need to:
 
 ##### - `npm or yarn start` to open developement at localhost:3000
 
-#### View -> https://nightte-business-app.netlify.app/
+#### View -> https://nightte-business-app.vercel.app/
 
 PS: 'NiGhtte' is my Gamer tag :D
